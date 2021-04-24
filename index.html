@@ -6,16 +6,30 @@
     <title> The Answer Class Auto Emails and</title>
     <style media="screen">
 
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      padding: 15px
+    }
+
+    .button1 {width: 100%;}
+
+
+
     div.box {
       box-sizing: border-box;
       width: 25%;
       border: 2px solid black;
       float: left;
       padding: 5px;
-    }
-
-    #OUTPUT {
-      width: 75%;
     }
 
     body {
@@ -33,7 +47,7 @@
     <h1>The Answer Class After Class Auto Emails</h1>
     <h2><u>How to use</u></h2>
     <p style="font-size:16px; color: black; font-weight:bold; font-style:;">
-        This is an applicaiton to help teachers of The Answer Class
+        This is an tool to help teachers of The Answer Class
         to fill out the After Class emails to parents. </br> </br> All you have to do it
         inset the relvant information for each student and the correct paragraph
         of text will appear so that you can copy and paste into your email draft </p>
@@ -107,13 +121,13 @@
     </form>
 
     </br></br>
-
-    <button onClick="getAndSetVal();"> SUBMIT </button> <br> <br>
+    <button class="button button1", onClick="getAndSetVal();">SUBMIT</button><br>
+    <!-- <button onClick="getAndSetVal();"> SUBMIT </button> <br> <br> -->
 
     </div>
 
 <!-- ___________________OUTPUT ALL THE INFORMATION__________________________ -->
-  <!-- <div class="box"> -->
+
   <div style="width: 70%; float:right;  background:white; margin:10px; padding: 5px">
 
   <div id="OUTPUT">
