@@ -52,7 +52,7 @@
         This is an tool to help teachers of The Answer Class
         to fill out the after class emails to parents.<br><br>
       </li>
-
+ be
       <li>
         All you have to do it <u style="color:red;">insert the relvant information for each student</u> and the correct version
         of text will appear so that you can copy and paste into your email draft (picture will also copy over)
@@ -94,11 +94,12 @@
 
     </br></br>
 
-    <label for="gender">Student's Gender:</label>
+    <label for="gender">Prefered Pronouns:</label>
 
     <select name="gender" id="gender">
-      <option value="Female">Female</option>
-      <option value="Male">Male</option>
+      <option value="Female">She/Her</option>
+      <option value="Male">He/Him/His</option>
+      <option value="NonBinary">They/Them</option>
     </select>
 
     <br></br>
@@ -113,6 +114,15 @@
     <p style="font-size:16px; color: black; font-weight:bold; font-style:;">
       <u>School/Teacher Information</u>
     </p>
+
+    <label for="classType">Class Type:</label>
+
+    <select name="classType" id="classType">
+      <option value="Female">Virtual</option>
+      <option value="InPerson">In-Person</option>
+    </select>
+
+    <br><br>
 
     <form>
       <label for="school">School Location:</label>
@@ -169,6 +179,7 @@
           // var maleVersion = "MALE";
           var website1 = "Khan Academy SAT prep website".link("https://www.khanacademy.org/sat")
           var website2 = "like us on Facebook".link("https://www.facebook.com/theanswerclass/?ref=hl")
+          var classType = document.getElementById('classType').value;
 
           var maleVersion = `Dear ${title}. ${Lname}, <br><br>Hope you are doing well. We just wanted to write a quick note to update you on the SAT prep class that ${Sname} attended at ${school}. <br><br>${Sname} was a pleasure to have in class. He was attentive, engaged, and made the most of his time while in class. He participated, worked hard to understand the material and asked good questions. Learning about the SAT is not what most teenagers do for fun, but ${Sname} did a great job of making it worthwhile.<br><br>We covered a lot in the short time we had together, and ${Sname} definitely learned the material. So we thank you for having had him attend. <br><br>We all know that this is a stressful time for all members of the family. Parents want their children to do their best and to get into the best college possible. Students want to do well, too, but also feel added pressure from friends, teachers, counselors, siblings, and parents. As we talked about during the class, no matter how you do on the SAT, you will still get into college and your family and friends will still love you. Knowing that, it is very important for the students to do whatever they can to be most prepared so that they are able to forget the stress and focus on the test. <br><br>Here are a few other topics that we covered in class. While the SAT is an extremely important aspect of the college application, it is by no means the only thing that admissions officers take into account: GPA, difficulty of courses, extra-curricular activities, sports, leadership positions, work history, volunteering, character traits, the college essay, teacher and counselor recommendations, and the SAT all play a part. So while it is important to have strong SAT scores, it should not be the sole focus. <br><br>Just as with playing an instrument, doing a sport, or riding a bike, SAT scores get better with practice. No one is good the first time he hits a key on a piano, shoots a basket, or gets on a two-wheeler, but with practice, everyone improves. The SAT is the same way. You can’t study for the SAT the way you would for a History or Biology test but you can practice. Students learned everything there is to know about the SAT in our class. The best thing to do between now and the test is for students to do practice problems using the tips and strategies that we learned in class. To support your student in this effort, we recommend checking out the ${website1} which has a wealth of practice opportunities and explanations. <br><br>Almost all students come to the class saying how much they dislike the SAT and how it is very stressful, difficult, terrible, and how it makes them feel stupid. The reason students feel this way is not because they aren’t smart, but because the SAT is unlike any other test they have ever taken. The length, the way it is scored, the way the questions are asked amongst many other factors are both confusing and counterintuitive--confusing even the brightest students. Students aren’t poor test-takers; they just aren’t familiar with how the test works. But having taken this course, your student is now familiar with how the SAT is different and how he can use that to his advantage. <br><br>Finally, all students will get into a college that is right for them. There are hundreds of colleges out there that are very good and most importantly, ones that are very good for your child. <br><br>We thank you for the opportunity to have worked with your child. If you have any questions or if there is anything else that we can do for you, please let us know. We also invite you to ${website2} where we post interesting and informative articles and tips on the college application process as well as share current class dates and local parent night sessions.`
 
@@ -186,9 +197,7 @@
 
           var fP5 = `<br><br>Just as with playing an instrument, doing a sport, or riding a bike, SAT scores get better with practice. No one is good the first time he hits a key on a piano, shoots a basket, or gets on a two-wheeler, but with practice, everyone improves. The SAT is the same way. You can’t study for the SAT the way you would for a History or Biology test but you can practice. Students learned everything there is to know about the SAT in our class. The best thing to do between now and the test is for students to do practice problems using the tips and strategies that we learned in class. To support your student in this effort, we recommend checking out the ${website1} which has a wealth of practice opportunities and explanations.`
 
-          var fP6 = `<br><br>Almost all students come to the class saying how much they dislike the SAT and how it is very stressful, difficult, terrible, and how it makes them feel stupid. The reason students feel this way is not because they aren’t smart, but because the SAT is unlike any other test they have ever taken. The length, the way it is scored, the way the questions are asked amongst many other factors are both confusing and counterintuitive--confusing even the brightest students. Students aren’t poor test-takers; they just aren’t familiar with how the test works. But having taken this course, your student is now familiar with how the SAT is different and how she can use that to her advantage.`
-
-          var fP7 = `<br><br>Finally, all students will get into a college that is right for them. There are hundreds of colleges out there that are very good and most importantly, ones that are very good for your child. <br><br>We thank you for the opportunity to have worked with your child. If you have any questions or if there is anything else that we can do for you, please let us know. We also invite you to ${website2} where we post interesting and informative articles and tips on the college application process as well as share current class dates and local parent night sessions.`
+          var fP6 = `<br><br>Almost all students come to the class saying how much they dislike the SAT and how it is very stressful, difficult, terrible, and how it makes them feel stupid. The reason students feel this way is not because they aren’t smart, but because the SAT is unlike any other test they have ever taken. The length, the way it is scored, the way the questions are asked amongst many other factors are both confusing and counterintuitive--confusing even the brightest students. Students aren’t poor test-takers; they just aren’t familiar with how the test works. But having taken this course, your student is now familiar with how the SAT is different and how she can use that to her advantage.<br><br>Finally, all students will get into a college that is right for them. There are hundreds of colleges out there that are very good and most importantly, ones that are very good for your child. <br><br>We thank you for the opportunity to have worked with your child. If you have any questions or if there is anything else that we can do for you, please let us know. We also invite you to ${website2} where we post interesting and informative articles and tips on the college application process as well as share current class dates and local parent night sessions.`
 
           var ending = `<br><br>Be Well, <br><br>${teacher1} <br><br>${teacher2}`;
           // Be well,
@@ -201,7 +210,7 @@
             var finalVersion = subjectLine + maleVersion + ending;
           } else {
             // var finalVersion = femaleVersion;
-            var finalVersion = subjectLine + femaleIntro + fP1 + fP2 + fP3 + fP4 +fP5 + fP6 + fP7 + ending;
+            var finalVersion = subjectLine + femaleIntro + fP1 + fP2 + fP3 + fP4 +fP5 + fP6 + ending;
           }
 
           // var fullText = subjectLine
