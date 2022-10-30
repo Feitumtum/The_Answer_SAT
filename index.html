@@ -7,21 +7,8 @@
     <style media="screen">
 
     .button {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 15px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 5%
-      cursor: pointer;
-    }
-
-    .button {
-      padding: 15px 20px;
-      font-size: 24px;
+      padding: 10px 10px;
+      font-size: 20px;
       text-align: center;
       cursor: pointer;
       outline: none;
@@ -41,7 +28,10 @@
       transform: translateY(4px);
     }
 
-    .button1 {width: 100%;}
+    .myinput{
+      display: block;
+      width: 100%;
+    }
 
     div.box {
       box-sizing: border-box;
@@ -54,6 +44,7 @@
     body {
       background: white;
     }
+
     h1 {
       color: rgb(130,189,50);
       font-size: 40px;
@@ -110,12 +101,12 @@
 
     <form>
      <label for="Lname">Parent's Last Name:</label>
-     <input type="text" id="Lname" name="Lname">
+     <input type="text" id="Lname" name="Lname", class="myinput">
     </form>
 
     <label for="gender">Student's Prefered Pronouns:</label>
 
-    <select name="gender" id="gender">
+    <select name="gender" id="gender",, class="myinput">
       <option value="Female">She/Her</option>
       <option value="Male">He/Him/His</option>
       <option value="NonBinary">They/Their/Them</option>
@@ -125,7 +116,7 @@
 
     <form>
       <label for="Sname">Student's Name:</label>
-      <input type="text" id="Sname" name="Sname"> <br>
+      <input type="text" id="Sname" name="Sname", class="myinput"> <br>
     </form>
 
     </br>
@@ -136,7 +127,7 @@
 
     <label for="classType">Class Type:</label>
 
-    <select name="classType" id="classType">
+    <select name="classType" id="classType", class="myinput">
       <option value="in person">In-Person</option>
       <option value="virtual">Virtual</option>
     </select>
@@ -145,32 +136,32 @@
 
     <form>
       <label for="date">Date of Class:</label>
-      <input type="text" id="date">
+      <input type="text" id="date", class="myinput">
     </form>
     <dd>Example: May 24, 26, 28</dd>
     <br>
 
     <form>
       <label for="school">School Name:</label>
-      <input type="text" id="school"> <br>
+      <input type="text" id="school", class="myinput"> <br>
     </form>
 
     </br>
 
     <form>
       <label for="teacher1">Teacher 1:</label>
-      <input type="text" id="teacher1"> <br>
+      <input type="text" id="teacher1", class="myinput"> <br>
     </form>
 
     </br>
 
     <form>
       <label for="teacher2">Teacher 2:</label>
-      <input type="text" id="teacher2"> <br>
+      <input type="text" id="teacher2", class="myinput"> <br>
     </form>
 
     </br>
-    <button class="button button1", onClick="getAndSetVal();">SUBMIT</button><br>
+    <button class="button", onClick="getAndSetVal();">SUBMIT</button><br>
 
     </div>
 
