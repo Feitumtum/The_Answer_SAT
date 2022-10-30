@@ -19,6 +19,28 @@
       cursor: pointer;
     }
 
+    .button {
+      padding: 15px 20px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #04AA6D;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 8px #999;
+      margin-bottom: 10px;
+    }
+
+    .button:hover {background-color: #3e8e41}
+
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+
     .button1 {width: 100%;}
 
     div.box {
@@ -26,11 +48,11 @@
       width: 25%;
       border: 2px solid black;
       float: left;
-      padding: 5px;
+      padding: 8px;
     }
 
     body {
-      background: white; ? rgb(100,100,100);
+      background: white;
     }
     h1 {
       color: rgb(130,189,50);
@@ -91,7 +113,7 @@
      <input type="text" id="Lname" name="Lname">
     </form>
 
-    <label for="gender">Prefered Pronouns:</label>
+    <label for="gender">Student's Prefered Pronouns:</label>
 
     <select name="gender" id="gender">
       <option value="Female">She/Her</option>
@@ -149,7 +171,6 @@
 
     </br>
     <button class="button button1", onClick="getAndSetVal();">SUBMIT</button><br>
-    <!-- <button onClick="getAndSetVal();"> SUBMIT </button> <br> <br> -->
 
     </div>
 
