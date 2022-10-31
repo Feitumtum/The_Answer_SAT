@@ -18,6 +18,7 @@
       border-radius: 10px;
       box-shadow: 0 8px #999;
       margin-bottom: 10px;
+      width: 100%;
     }
 
     .button:hover {background-color: #3e8e41}
@@ -38,7 +39,7 @@
       width: 25%;
       border: 2px solid black;
       float: left;
-      padding: 8px;
+      padding: 5px;
     }
 
     body {
@@ -56,57 +57,70 @@
   <body>
 
     <h1>The Answer Class After Class Auto Emails</h1>
+
+    <h3>This is an tool to help teachers of The Answer Class
+      to fill out the after class emails to parents.</u></h3>
+
     <h2><u>How to use</u></h2>
 
-    <ul style="font-size:18px; color: black; font-weight:bold; font-style:bold;">
+    <ol style="font-size:18px; color: black; font-weight:bold; font-style:bold;">
       <li>
-        This is an tool to help teachers of The Answer Class
-        to fill out the after class emails to parents.<br><br>
+        Insert the relvant information for the School/Teacher Information section<br></br>
       </li>
 
       <li>
-        All you have to do it <u style="color:red;">insert the relvant information for each student</u> and the correct version
-        of text will appear so that you can copy and paste into your email draft (picture will also copy over)
-        Once you are done with one student, you can simply change the student information and the school and teacher information
-        will remain the same. <br><br>
+        Insert the relvant information for the Student/Parent Information<br></br>
       </li>
 
-      <li>There are <u style="color:red;">three sets of pronouns available</u> to use based on the student's preferred pronous<br><br>  </li>
-      <dd>he/his/him <br>she/her <br> they/their/them</dd> <br>
+      <li>Click the green "Submit" button to insert changes</li>
+        <ul>
+          <li>The correct version of text will be inserted into the email template</li><br>
+        </ul>
+
+      <li>Change the student information and repeat for all students</li>
+        <ul>
+          <li>Once the "School/Teacher Information" is filled, you only have to change the "Student/Parent Information" and click the Submit botton again</li><br>
+        </ul>
+
+      
+      <li>
+        Copy and paste into your email draft
+      </li>
+
+      <br>
+    </ol>
+
+    <h2><u>Notes</u></h2>
+    <ol>
+      <li>
+        There are <u style="color:red;">three sets of pronouns available</u> to use based on the student's preferred pronouns
+      </li>
+        <ul>
+          <li>she/her</li>
+          <li>he/his/him</li>
+          <li>they/their/them</li><br>
+        </ul>
 
       <li>The <u style="color:red;">first line of the output will be the subject line</u> for the email.</li></p>
-      
-      <!-- <li> Pronouns and things that change will be highlighted in yellow. Therefore, <u style="color:red;">make sure to "paste as text"</u> when you copy over to your email to avoid copying the highlighting over. -->
-  <br>
 
-    </ul>
-    </br>
+      <li>You can also <u style="color:red;">copy the logo</u> and it will transfer to the email for the email.</li></p>
 
+    </ol>
+    
     <div class="box">
 
     <p style="font-size:16px; color: black; font-weight:bold;">
       <u>Student/Parent Information</u>
     </p>
 
-    <label for="title">Title:</label>
-
-    <select name="title" id="title">
-      <option value="Mr">Mr</option>
-      <option value="Mrs">Mrs</option>
-      <option value="Ms">Ms</option>
-      <option value="Miss">Miss</option>
-    </select>
-
-    <br><br>
-
     <form>
-     <label for="Lname">Parent's Last Name:</label>
-     <input type="text" id="Lname" name="Lname", class="myinput">
+      <label for="Sname">Student's Name:</label>
+      <input type="text" id="Sname" name="Sname", class="myinput"> <br>
     </form>
 
     <label for="gender">Student's Prefered Pronouns:</label>
 
-    <select name="gender" id="gender",, class="myinput">
+    <select name="gender" id="gender",, class="myinput"> <br>
       <option value="Female">She/Her</option>
       <option value="Male">He/Him/His</option>
       <option value="NonBinary">They/Their/Them</option>
@@ -114,12 +128,25 @@
 
     <br></br>
 
-    <form>
-      <label for="Sname">Student's Name:</label>
-      <input type="text" id="Sname" name="Sname", class="myinput"> <br>
-    </form>
+    <label for="title">Title:</label> 
+    <select name="title" id="title">
+      <option value="Mr">Mr</option>
+      <option value="Mrs">Mrs</option>
+      <option value="Ms">Ms</option>
+      <option value="Miss">Miss</option>
+    </select>
 
-    </br>
+    <br></br>
+
+    <form>
+     <label for="Lname">Parent's Last Name:</label>
+     <input type="text" id="Lname" name="Lname", class="myinput">
+    </form>
+  
+  <br></br>
+
+  <button class="button", onClick="getAndSetVal();">SUBMIT</button><br>
+  <br>
 
     <p style="font-size:16px; color: black; font-weight:bold;">
       <u>School/Teacher Information</u>
@@ -138,7 +165,7 @@
       <label for="date">Date of Class:</label>
       <input type="text" id="date", class="myinput">
     </form>
-    <dd>Example: May 24, 26, 28</dd>
+    <dd>Example: May 1st, 2nd, 23rd, 26th</dd>
     <br>
 
     <form>
@@ -159,9 +186,6 @@
       <label for="teacher2">Teacher 2:</label>
       <input type="text" id="teacher2", class="myinput"> <br>
     </form>
-
-    </br>
-    <button class="button", onClick="getAndSetVal();">SUBMIT</button><br>
 
     </div>
 
@@ -198,9 +222,9 @@
 
           // if statments to determine gender and class type
           if (classType == "virtual") {
-            var intro = `<p>Dear ${title}. ${Lname}, <br><br>Hope you are doing well. We just wanted to write a quick note to update you on the ${classType} SAT prep class that ${Sname} attended on ${date}.</p>`
+            var intro = `<p>Dear ${title}. ${Lname}, <p>Hope you are doing well. We just wanted to write a quick note to update you on the ${classType} SAT prep class that ${Sname} attended on ${date}.</p>`
           } else {
-            var intro = `<p>Dear ${title}. ${Lname}, <br><br>Hope you are doing well. We just wanted to write a quick note to update you on the ${classType} SAT prep class that ${Sname} attended on ${date} at ${school}.</p>`
+            var intro = `<p>Dear ${title}. ${Lname}, <p>Hope you are doing well. We just wanted to write a quick note to update you on the ${classType} SAT prep class that ${Sname} attended on ${date} at ${school}.</p>`
           }
 
           if (gender == "Female") {
