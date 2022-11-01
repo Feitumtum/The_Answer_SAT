@@ -118,7 +118,7 @@
       <input type="text" id="Sname" name="Sname", class="myinput"> <br>
     </form>
 
-    <label for="gender">Student's Prefered Pronouns:</label>
+    <label for="gender">Student's Prefered Pronouns (dropdown):</label>
 
     <select name="gender" id="gender",, class="myinput"> <br>
       <option value="Female">She/Her</option>
@@ -128,7 +128,7 @@
 
     <br></br>
 
-    <label for="title">Title:</label> 
+    <label for="title">Title (dropdown):</label> 
     <select name="title" id="title">
       <option value="Mr">Mr</option>
       <option value="Mrs">Mrs</option>
@@ -152,7 +152,7 @@
       <u>School/Teacher Information</u>
     </p>
 
-    <label for="classType">Class Type:</label>
+    <label for="classType">Class Type (dropdown):</label>
 
     <select name="classType" id="classType", class="myinput">
       <option value="in person">In-Person</option>
@@ -222,9 +222,9 @@
 
           // if statments to determine gender and class type
           if (classType == "virtual") {
-            var intro = `<p>Dear ${title}. ${Lname}, <p>Hope you are doing well. We just wanted to write a quick note to update you on the ${classType} SAT prep class that ${Sname} attended on ${date}.</p>`
+            var intro = `<p>Dear ${title}. ${Lname}, <p>Hope you are doing well. We just wanted to write a quick note to update you on the virtual SAT prep class that ${Sname} attended on ${date}.</p>`
           } else {
-            var intro = `<p>Dear ${title}. ${Lname}, <p>Hope you are doing well. We just wanted to write a quick note to update you on the ${classType} SAT prep class that ${Sname} attended on ${date} at ${school}.</p>`
+            var intro = `<p>Dear ${title}. ${Lname}, <p>Hope you are doing well. We just wanted to write a quick note to update you on the in-person SAT prep class that ${Sname} attended on ${date} at ${school}.</p>`
           }
 
           if (gender == "Female") {
