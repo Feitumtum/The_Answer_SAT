@@ -60,7 +60,7 @@ h1 {
   width: 100%;
   clear: both;
   background: #04aa6d;
-  padding: 1.5rem;
+  padding: 1.5rem 0 1.5rem 0;
 }
 
 /* Instruction Box */
