@@ -1,0 +1,129 @@
+button {
+  padding: 10px 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px #999;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+myinput {
+  display: block;
+  width: 100%;
+}
+
+div.box {
+  box-sizing: border-box;
+  width: 25%;
+  border: 2px solid black;
+  float: left;
+  margin-left: 15px;
+  padding: 10px;
+}
+
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: rgb(130, 189, 50);
+  font-size: 40px;
+}
+
+/* Title */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  float: left;
+  width: 100%;
+  clear: both;
+  background: #04aa6d;
+  padding: 1.5rem;
+}
+
+/* Instruction Box */
+.instructions-box {
+  display: flex;
+  padding: 10px;
+  margin: auto;
+}
+
+/* Process Box */
+.process-box {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.one {
+  flex: 2 1 0;
+}
+
+.two {
+  flex: 2 1 0;
+}
+
+.three {
+  flex: 2 1 0;
+}
+
+/* Step Number */
+.step-number {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Step Description */
+.step-description {
+  font-size: 18px;
+  color: #555;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.notes-section {
+  height: 225;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.output-section {
+  width: 70%;
+  float: right;
+  background: white;
+  margin: 10px;
+  padding: 5px;
+}

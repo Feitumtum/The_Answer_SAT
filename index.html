@@ -3,115 +3,82 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title> The Answer Class</title>
-    <style media="screen">
-
-    .button {
-      padding: 10px 10px;
-      font-size: 20px;
-      text-align: center;
-      cursor: pointer;
-      outline: none;
-      color: #fff;
-      background-color: #04AA6D;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 8px #999;
-      margin-bottom: 10px;
-      width: 100%;
-    }
-
-    .button:hover {background-color: #3e8e41}
-
-    .button:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
-    }
-
-    .myinput{
-      display: block;
-      width: 100%;
-    }
-
-    div.box {
-      box-sizing: border-box;
-      width: 25%;
-      border: 2px solid black;
-      float: left;
-      padding: 5px;
-    }
-
-    body {
-      background: white;
-    }
-
-    h1 {
-      color: rgb(130,189,50);
-      font-size: 40px;
-      /* property2: value2 */
-    }
-
-    </style>
   </head>
-  <body>
 
+  <div style="display: flex; flex-direction: column; margin: auto;">
+    <div class="title">
+        The Answer Class After Class Email Generator
+    </div>
+
+    <div class="instructions-box">
+      <div class="process-box one">
+        <div class="step-number">
+          Step 1: Enter Information
+        </div>
+        <div class="step-description">
+          A) Insert the relvant information for the School/Teacher Information section
+          <ul>
+            <li>For In Person Class --> Fill in the School Name</li>
+            <li>For Virtual Class --> Leave School Name Blank</li>
+            <li>If only one teacher --> Fill in Teacher 1 only</li><br>
+          </ul>
+          B) Insert the relvant information for the Student/Parent Information
+        </div>
+    </div>
+
+    <div class="process-box two">
+      <div class="step-number">
+        Step 2: Submit/Copy Text
+      </div>
+      <div class="step-description">
+        Click the green  <span style="color:rgb(253, 253, 253);background-color:#3e8e41">SUBMIT</span> button to insert changes
+        <ul>
+          <li>The correct version of text will be inserted into the email template</li>
+        </ul>
+        Click the green <span style="color:rgb(253, 253, 253);background-color:#3e8e41">"COPY</span> button to copy to clipboard
+        <ul>
+          <li> You can use Ctrl + V to paste into your email </li>
+          <li> <u><b>Move the Email Subject text after Ctrl + V</b></u></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="process-box three">
+      <div class="step-number">
+        Step 3: Repeat for all students
+      </div>
+      <div class="step-description">
+        Change the student information and repeat for all student
+        <ul>
+          <li>
+            Only fill out the "School/Teacher Information" once per class
+          </li><br>
+          <li>
+            You only need to change the "Student/Parent Information" 
+            and click the Submit button again
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
   
-  <h1>The Answer Class After Class Auto Emails</h1>
+  <div style="padding-left: 10px;">
+    <h2><u>Notes</u></h2>
+    <ol>
+      <li>
+        Three sets of pronouns available (she/her, he/his/him, they/their/them)
+        <!-- There are <u style="color:red;">three sets of pronouns available</u> to use based on the student's preferred pronouns -->
+      </li></p>
+      <li> First line of the output will be the subject line for the email.</li></p>
 
-  <h3>This is an tool to help teachers of The Answer Class
-    to fill out the after class emails to parents.</u></h3>
+      <li>Clicking the <u><b>COPY TEXT</b></u> button will copy all text (including the email subject and logo).</li></p>
 
-  <h2><u>How to use</u></h2>
-
-  <ol style="font-size:18px; color: black; font-weight:bold; font-style:bold;">
-    <li>
-      Insert the relvant information for the School/Teacher Information section
-    </li>
-      <ul>
-        <li>For In Person Class --> Fill in the School Name</li>
-        <li>For Virtual Class --> Leave School Name Blank</li>
-        <li>If only one teacher --> Fill in Teacher 1 only</li><br>
-      </ul>
-
-    <li>
-      Insert the relvant information for the Student/Parent Information<br></br>
-    </li>
-
-    <li>Click the green "Submit" button to insert changes</li>
-      <ul>
-        <li>The correct version of text will be inserted into the email template</li><br>
-      </ul>
-
-    <li>Change the student information and repeat for all students</li>
-      <ul>
-        <li>Once the "School/Teacher Information" is filled, you only have to change the "Student/Parent Information" and click the Submit botton again</li><br>
-      </ul>
-
-    <li>
-      Copy and paste into your email draft
-    </li>
-
-    <br>
-  </ol>
-
-  <h2><u>Notes</u></h2>
-  <ol>
-    <li>
-      There are <u style="color:red;">three sets of pronouns available</u> to use based on the student's preferred pronouns
-    </li>
-      <ul>
-        <li>she/her</li>
-        <li>he/his/him</li>
-        <li>they/their/them</li><br>
-      </ul>
-
-    <li>The <u style="color:red;">first line of the output will be the subject line</u> for the email.</li></p>
-
-    <li>You can also <u style="color:red;">copy the logo</u> and it will transfer to the email for the email.</li></p>
-
-  </ol>
-  
+    </ol>
+    </div> 
+  </div>
+</div>
   <div class="box">
 
   <p style="font-size:16px; color: black; font-weight:bold;">
@@ -148,16 +115,14 @@
     <input type="text" id="Lname" name="Lname", class="myinput">
   </form>
 
-<br></br>
-
 <button class="button", onClick="getAndSetVal();">SUBMIT</button><br></br>
 
-<!-- <button class="button", onclick="copyText();">Copy Text</button> -->
+<button class="button", onclick="copyText();">COPY</button>
 
 <br>
 
   <p style="font-size:16px; color: black; font-weight:bold;">
-    <u>School/Teacher Information</u>
+    <u>School/Teacher Information (Fill in once)</u>
   </p>
 
   <label for="classType">Class Type (dropdown):</label>
@@ -184,14 +149,14 @@
   </br>
 
   <form>
-    <label for="teacher1">Teacher 1:</label>
+    <label for="teacher1">Teacher 1 (required):</label>
     <input type="text" id="teacher1", class="myinput"> <br>
   </form>
 
   </br>
 
   <form>
-    <label for="teacher2">Teacher 2:</label>
+    <label for="teacher2">Teacher 2 (optional):</label>
     <input type="text" id="teacher2", class="myinput"> <br>
   </form>
 
@@ -199,7 +164,7 @@
 
 <!-- ___________________OUTPUT ALL THE INFORMATION__________________________ -->
 
-  <div style="width: 70%; float:right;  background:white; margin:10px; padding: 5px">
+  <div id="AllOutput" class="output-section">
 
   <div id="OUTPUT">
 
@@ -211,7 +176,6 @@
 
   <script>
     function getAndSetVal() {
-      validateForm
         var Sname = document.getElementById('Sname').value;
         var Lname = document.getElementById('Lname').value;
         var title = document.getElementById('title').value;
@@ -283,16 +247,16 @@
         <br><br>${teacher2}
         <br><br>`
 
+        alert ("Changed Applied!");
         var finalVersion = subjectLine + intro + middlePart;
-
         var fullText = finalVersion;
         document.getElementById('OUTPUT').innerHTML = fullText;
-        document.getElementById('OUTPUT').appendChild(document.getElementById('logo'))
+        document.getElementById('OUTPUT').appendChild(document.getElementById('logo'));
     }
 
     function copyText() {
       var r = document.createRange();
-      r.selectNode(document.getElementById("OUTPUT"));
+      r.selectNode(document.getElementById("AllOutput"));
       window.getSelection().removeAllRanges();
       window.getSelection().addRange(r);
       document.execCommand('copy');
@@ -309,7 +273,7 @@
         }
       }
     }
-</script>
+  </script>
 
   </div>
 
