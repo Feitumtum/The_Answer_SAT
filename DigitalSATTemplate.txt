@@ -2,7 +2,7 @@ Subject Line: Thank You for Sending {Sname} to SAT Prep Class!
 
 Dear {title} {Lname},
 
-Hope you are doing well. We are writing to update you on the Digital SAT prep class that {insert student first name here} {recently attended}.
+I hope you are doing well! We are writing to update you on the SAT prep class that {Sname} {recently attended}.
 
 {Sname} was a pleasure to have in class. {Ugender1} paid attention, engaged with the material, and made the most of {gender2} time while in class. {Ugender1} participated, worked hard to understand the material, and asked good questions. Most teens do not take SAT classes for fun, but {Sname} did a great job of making it worthwhile.
 
