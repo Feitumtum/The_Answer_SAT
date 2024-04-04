@@ -1,182 +1,184 @@
 <DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script type="text/javascript" src="./index.js"></script>
-    <title> The Answer Class</title>
-  </head>
-
-  <div style="display: flex; flex-direction: column; margin: auto;">
-    <div class="title">
-        The Answer Class After Class Email Generator
-    </div>
-
-    <div class="instructions-box">
-      <div class="process-box one">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="index.css">
+      <script type="text/javascript" src="./index.js"></script>
+      <script type="text/javascript" src="./test.js"></script>
+      <title> The Answer Class</title>
+    </head>
+  
+    <div style="display: flex; flex-direction: column; margin: auto;">
+      <div class="title">
+          The Answer Class After Class Email Generator
+      </div>
+  
+      <div class="instructions-box">
+        <div class="process-box one">
+          <div class="step-number">
+            Step 1: Enter Information
+          </div>
+          <div class="step-description">
+            A) Insert the relvant information for the School/Teacher Information section
+            <ul>
+              <li>For In Person Class --> Fill in the School Name</li>
+              <li>For Virtual Class --> Leave School Name Blank</li>
+              <li>If only one teacher --> Fill in Teacher 1 only</li><br>
+            </ul>
+            B) Insert the relvant information for the Student/Parent Information
+          </div>
+      </div>
+  
+      <div class="process-box two">
         <div class="step-number">
-          Step 1: Enter Information
+          Step 2: Submit/Copy Text
         </div>
         <div class="step-description">
-          A) Insert the relvant information for the School/Teacher Information section
+          Click the green  <span style="color:rgb(253, 253, 253);background-color:#3e8e41">SUBMIT</span> button to insert changes
           <ul>
-            <li>For In Person Class --> Fill in the School Name</li>
-            <li>For Virtual Class --> Leave School Name Blank</li>
-            <li>If only one teacher --> Fill in Teacher 1 only</li><br>
+            <li>The correct version of text will be inserted into the email template</li>
           </ul>
-          B) Insert the relvant information for the Student/Parent Information
+          Click the green <span style="color:rgb(253, 253, 253);background-color:#3e8e41">"COPY</span> button to copy to clipboard
+          <ul>
+            <li> You can use Ctrl + V to paste into your email </li>
+            <li> <u><b>Move the Email Subject text after Ctrl + V</b></u></li>
+          </ul>
         </div>
-    </div>
-
-    <div class="process-box two">
-      <div class="step-number">
-        Step 2: Submit/Copy Text
       </div>
-      <div class="step-description">
-        Click the green  <span style="color:rgb(253, 253, 253);background-color:#3e8e41">SUBMIT</span> button to insert changes
-        <ul>
-          <li>The correct version of text will be inserted into the email template</li>
-        </ul>
-        Click the green <span style="color:rgb(253, 253, 253);background-color:#3e8e41">"COPY</span> button to copy to clipboard
-        <ul>
-          <li> You can use Ctrl + V to paste into your email </li>
-          <li> <u><b>Move the Email Subject text after Ctrl + V</b></u></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="process-box three">
-      <div class="step-number">
-        Step 3: Repeat for all students
-      </div>
-      <div class="step-description">
-        Change the student information and repeat for all student
-        <ul>
-          <li>
-            Only fill out the "School/Teacher Information" once per class
-          </li><br>
-          <li>
-            You only need to change the "Student/Parent Information" 
-            and click the Submit button again
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
   
-  <div style="padding-left: 10px;">
-    <h2><u>Notes</u></h2>
-    <ol>
-      <li>
-        Three sets of pronouns available (she/her, he/his/him, they/their/them)
-        <!-- There are <u style="color:red;">three sets of pronouns available</u> to use based on the student's preferred pronouns -->
-      </li></p>
-      <li> First line of the output will be the subject line for the email.</li></p>
-
-      <li>Clicking the <u><b>COPY TEXT</b></u> button will copy all text (including the email subject and logo).</li></p>
-
-    </ol>
-    </div> 
+      <div class="process-box three">
+        <div class="step-number">
+          Step 3: Repeat for all students
+        </div>
+        <div class="step-description">
+          Change the student information and repeat for all student
+          <ul>
+            <li>
+              Only fill out the "School/Teacher Information" once per class
+            </li><br>
+            <li>
+              You only need to change the "Student/Parent Information" 
+              and click the Submit button again
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div style="padding-left: 10px;">
+      <h2><u>Notes</u></h2>
+      <ol>
+        <li>
+          Three sets of pronouns available (she/her, he/his/him, they/their/them)
+          <!-- There are <u style="color:red;">three sets of pronouns available</u> to use based on the student's preferred pronouns -->
+        </li></p>
+        <li> First line of the output will be the subject line for the email.</li></p>
+  
+        <li>Clicking the <u><b>COPY TEXT</b></u> button will copy all text (including the email subject and logo).</li></p>
+  
+      </ol>
+      </div> 
+    </div>
   </div>
-</div>
-  <div class="box">
-
-  <p style="font-size:16px; color: black; font-weight:bold;">
-    <u>Student/Parent Information</u>
-  </p>
-
-  <form>
-    <label for="Sname">Student's Name:</label>
-    <input type="text" id="Sname" name="Sname", class="myinput"> <br>
-  </form>
-
-  <label for="gender">Student's Prefered Pronouns (dropdown):</label>
-
-  <select name="gender" id="gender",, class="myinput"> <br>
-    <option value="Female">She/Her</option>
-    <option value="Male">He/Him/His</option>
-    <option value="NonBinary">They/Their/Them</option>
-  </select>
-
-  <br></br>
-
-  <label for="title">Title (dropdown):</label> 
-  <select name="title" id="title">
-    <option value="Mr">Mr</option>
-    <option value="Mrs">Mrs</option>
-    <option value="Ms">Ms</option>
-    <option value="Miss">Miss</option>
-  </select>
-
-  <br></br>
-
-  <form>
-    <label for="Lname">Parent's Last Name:</label>
-    <input type="text" id="Lname" name="Lname", class="myinput">
-  </form>
-
-<button class="button", onClick="getAndSetVal();">SUBMIT</button><br></br>
-
-<button class="button", onclick="copyText();">COPY</button>
-
-<br>
-
-  <p style="font-size:16px; color: black; font-weight:bold;">
-    <u>School/Teacher Information (Fill in once)</u>
-  </p>
-
-  <label for="classType">Class Type (dropdown):</label>
-
-  <select name="classType" id="classType", class="myinput">
-    <option value="in person">In-Person</option>
-    <option value="virtual">Virtual</option>
-  </select>
-
-  <br> <br>
-
-  <form>
-    <label for="date">Date of Class:</label>
-    <input type="text" id="date", class="myinput">
-  </form>
-  <dd>Example: May 1st, 2nd, 23rd, 26th</dd>
+    <div class="box">
+  
+    <p style="font-size:16px; color: black; font-weight:bold;">
+      <u>Student/Parent Information</u>
+    </p>
+  
+    <form>
+      <label for="Sname">Student's Name:</label>
+      <input type="text" id="Sname" name="Sname", class="myinput"> <br>
+    </form>
+  
+    <label for="gender">Student's Prefered Pronouns (dropdown):</label>
+  
+    <select name="gender" id="gender",, class="myinput"> <br>
+      <option value="Female">She/Her</option>
+      <option value="Male">He/Him/His</option>
+      <option value="NonBinary">They/Their/Them</option>
+    </select>
+  
+    <br></br>
+  
+    <label for="title">Title (dropdown):</label> 
+    <select name="title" id="title">
+      <option value="Mr">Mr</option>
+      <option value="Mrs">Mrs</option>
+      <option value="Ms">Ms</option>
+      <option value="Miss">Miss</option>
+    </select>
+  
+    <br></br>
+  
+    <form>
+      <label for="Lname">Parent's Last Name:</label>
+      <input type="text" id="Lname" name="Lname", class="myinput">
+    </form>
+  
+  <button class="button", onClick="getAndSetVal();">SUBMIT</button><br></br>
+  
+  <button class="button", onclick="copyText();">COPY</button>
+  
   <br>
-
-  <form>
-    <label for="school">School Name (Leave blank for virtual classes):</label>
-    <input type="text" id="school", class="myinput"> <br>
-  </form>
-
-  </br>
-
-  <form>
-    <label for="teacher1">Teacher 1 (required):</label>
-    <input type="text" id="teacher1", class="myinput"> <br>
-  </form>
-
-  </br>
-
-  <form>
-    <label for="teacher2">Teacher 2 (optional):</label>
-    <input type="text" id="teacher2", class="myinput"> <br>
-  </form>
-
-  </div>
-
-<!-- ___________________OUTPUT ALL THE INFORMATION__________________________ -->
-
-  <div id="AllOutput" class="output-section">
-
-  <div id="OUTPUT">
-
-  </div>
-
-  <img src="https://github.com/Feitumtum/The_Answer_SAT/blob/main/The_Answer_Class_Logo.png?raw=true" alt="logo">
-
-  </div>
-
-  </div>
-
-  </body>
-
-</html>
+  
+    <p style="font-size:16px; color: black; font-weight:bold;">
+      <u>School/Teacher Information (Fill in once)</u>
+    </p>
+  
+    <label for="classType">Class Type (dropdown):</label>
+  
+    <select name="classType" id="classType", class="myinput">
+      <option value="in person">In-Person</option>
+      <option value="virtual">Virtual</option>
+    </select>
+  
+    <br> <br>
+  
+    <form>
+      <label for="date">Date of Class:</label>
+      <input type="text" id="date", class="myinput">
+    </form>
+    <dd>Example: May 1st, 2nd, 23rd, 26th</dd>
+    <br>
+  
+    <form>
+      <label for="school">School Name (Leave blank for virtual classes):</label>
+      <input type="text" id="school", class="myinput"> <br>
+    </form>
+  
+    </br>
+  
+    <form>
+      <label for="teacher1">Teacher 1 (required):</label>
+      <input type="text" id="teacher1", class="myinput"> <br>
+    </form>
+  
+    </br>
+  
+    <form>
+      <label for="teacher2">Teacher 2 (optional):</label>
+      <input type="text" id="teacher2", class="myinput"> <br>
+    </form>
+  
+    </div>
+  
+  <!-- ___________________OUTPUT ALL THE INFORMATION__________________________ -->
+  
+    <div id="AllOutput" class="output-section">
+  
+    <div id="OUTPUT">
+  
+    </div>
+  
+    <img src="https://github.com/Feitumtum/The_Answer_SAT/blob/main/The_Answer_Class_Logo.png?raw=true" alt="logo">
+  
+    </div>
+  
+    </div>
+  
+    </body>
+  
+  </html>
+  

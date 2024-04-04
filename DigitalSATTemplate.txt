@@ -1,24 +1,37 @@
-Subject Line: Thank You for Sending (insert first name of student) to SAT Prep Class!
+Subject Line: Thank You for Sending {Sname} to SAT Prep Class!
 
-Dear {insert parent first name here},
+Dear {title} {Lname},
 
-Hope you are doing well. We are writing to update you on the Digital SAT prep class that {insert student first name here} recently attended.
-{insert student’s first name here} was a pleasure to have in class. (He/She/They) paid attention, engaged with the material, and made the most of (his/her/their) time while in class. (He/She/They) participated, worked hard to understand the material, and asked good questions. Most teens do not take SAT classes for fun, but {insert student’s first name here} did a great job of making it worthwhile.
-We covered a lot in the short time we had together, and {insert student’s first name here} seemed engaged with the material. So we thank you that (he/she/they) attended.
-Just as with playing an instrument, participating in a sport, or riding a bike, SAT scores get better with practice. No one sounds like Mozart the first time she hits a key on a piano, shoots baskets like A’ja Wilson the first time she shoots a basket, or rides like Lance Armstrong (pre-steroids) the first time she gets on a two-wheeler, but with practice, everyone improves.
+Hope you are doing well. We are writing to update you on the Digital SAT prep class that {insert student first name here} {recently attended}.
+
+{Sname} was a pleasure to have in class. {Ugender1} paid attention, engaged with the material, and made the most of {gender2} time while in class. {Ugender1} participated, worked hard to understand the material, and asked good questions. Most teens do not take SAT classes for fun, but {Sname} did a great job of making it worthwhile.
+
+We covered a lot in the short time we had together, and {Sname} seemed engaged with the material. So we thank you that {Lgender1} attended.
+
+Just as with playing an instrument, participating in a sport, or riding a bike, SAT scores get better with practice. No one sounds like Mozart the first time they hit a key on a piano, shoots baskets like A’ja Wilson the first time they shoot a basket, or rides like Lance Armstrong (pre-steroids) the first time they get on a two-wheeler, but with practice, everyone improves.
+
 The SAT is the same way. You can’t study for the SAT as you would for a History or Biology test but you can practice. Students learned everything they need to know about the SAT in our class. The best thing students can do between now and the test is to practice problems using the tips and strategies that they learned in class.  Students can review these strategies by referring to The Answer Class Digital SAT Student Guide.
+
 Almost all students come to the class saying how much they dislike the SAT, how it is very stressful, difficult, and terrible, and how it makes them feel stupid. The reason students feel this way has nothing to do with their intelligence but rather because the SAT resembles no other test they have ever taken. The length, the scoring, the way questions are asked, and many other factors both confuse and go against prior learning--confounding even the brightest students.
-Students aren’t poor test-takers; they just aren’t familiar with how the test works. But having taken this course, your student now knows how the SAT differs and how (he/she/they) can use that to (his/her/their) advantage.
+
+Students aren’t poor test-takers; they just aren’t familiar with how the test works. But having taken this course, your student now knows how the SAT differs and how {gender2} can use that to {gender2} advantage.
+
 Finally, all students will get into a college that is right for them. You have many good choices of colleges to apply to that will work very well for your child.
+
 The Answer Class Affordable College Admissions Support
-As you may know, in addition to test prep, we offer a full suite of affordable college admissions offerings: College Admissions Crash Courses, College Essay Writing Workshops, a Personalized College List Service, 1:1 College Admissions Support for Parents, and 1:1 College Application & Accountatiblity Support for Students.
+
+As you may know, in addition to test prep, we offer a full suite of affordable college admissions offerings: College Admissions Crash Courses, College Essay Writing Workshops, a Personalized College List Service, 1:1 College Admissions Support for Parents, and 1:1 College Application & Accountability Support for Students.
+
 You choose the premium bundle that works for your family – so that you can best position your child for a successful college admissions cycle – all without breaking the bank!
+
 Let’s Be Friends on Socials!
+
 We also invite you to like us on Facebook and follow us on Instagram!
+
 We thank you for the opportunity to have worked with your child. If you have any questions or if there is anything else that we can do for you, please let us know.
 
 Be well,
 
-Teacher name
+{teacher1}
 
-Teacher name
+{teacher2}
