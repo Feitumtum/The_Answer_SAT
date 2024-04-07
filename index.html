@@ -81,7 +81,20 @@
       </div> 
     </div>
   </div>
-    <div class="box">
+    <div class="inputs">
+      <p style="font-size:16px; color: black; font-weight:bold;">
+        <u>Select Email Template</u>
+      </p>
+      <form id="radioForm">
+        <input type="radio" id="TemplateOption1" name="template" value="SAT">
+        <label for="TemplateOption1">Digital SAT Template</label><br>
+        <input type="radio" id="TemplateOption2" name="template" value="CollegeEssay">
+        <label for="TemplateOption2">College Essay Template</label><br>
+        <input type="radio" id="TemplateOption3" name="template" value="ACT">
+        <label for="TemplateOption3">ACT Template</label><br>
+      </form>
+      <div id="error-msg" style="color: red;"></div>
+      
   
     <p style="font-size:16px; color: black; font-weight:bold;">
       <u>Student/Parent Information</u>
@@ -92,7 +105,7 @@
       <input type="text" id="Sname" name="Sname", class="myinput"> <br>
     </form>
   
-    <label for="gender">Student's Prefered Pronouns (dropdown):</label>
+    <label for="gender">Student's Preferred Pronouns (dropdown):</label>
   
     <select name="gender" id="gender",, class="myinput"> <br>
       <option value="Female">She/Her</option>
@@ -167,18 +180,11 @@
   <!-- ___________________OUTPUT ALL THE INFORMATION__________________________ -->
   
     <div id="AllOutput" class="output-section">
-  
-    <div id="OUTPUT">
-  
+      <div id="OUTPUT">
+        </div>
+          <img src="https://github.com/Feitumtum/The_Answer_SAT/blob/main/The_Answer_Class_Logo.png?raw=true" alt="logo">
+        </div>
     </div>
-  
-    <img src="https://github.com/Feitumtum/The_Answer_SAT/blob/main/The_Answer_Class_Logo.png?raw=true" alt="logo">
-  
-    </div>
-  
-    </div>
-  
     </body>
-  
   </html>
   

@@ -28,7 +28,7 @@ myinput {
   width: 100%;
 }
 
-div.box {
+div.inputs {
   box-sizing: border-box;
   width: 25%;
   border: 2px solid black;

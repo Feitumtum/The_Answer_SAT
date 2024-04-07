@@ -1,49 +1,64 @@
 function getAndSetVal() {
-  var Sname = document.getElementById("Sname").value;
-  var Lname = document.getElementById("Lname").value;
-  var title = document.getElementById("title").value;
-  var gender = document.getElementById("gender").value;
+  var templateOption = document.querySelector('input[name="template"]:checked');
+  var errorMsg = document.getElementById("error-msg");
 
-  var school = document.getElementById("school").value;
-  var classType = document.getElementById("classType").value;
-  var date = document.getElementById("date").value;
-  var teacher1 = document.getElementById("teacher1").value;
-  var teacher2 = document.getElementById("teacher2").value;
+  if (templateOption) {
+    var templateValue = templateOption.value;
+    console.log(templateValue);
+    errorMsg.textContent = ""; // Clear error message if an option is selected
 
-  // Determine pronouns based on student gender
-  if (gender == "Female") {
-    var Ugender1 = "She";
-    var Lgender1 = "she";
-    var gender2 = "her";
-  } else if (gender == "Male") {
-    var Ugender1 = "He";
-    var Lgender1 = "he";
-    var gender2 = "his";
+    var Sname = document.getElementById("Sname").value;
+    var Lname = document.getElementById("Lname").value;
+    var title = document.getElementById("title").value;
+    var gender = document.getElementById("gender").value;
+
+    var school = document.getElementById("school").value;
+    var classType = document.getElementById("classType").value;
+    var date = document.getElementById("date").value;
+    var teacher1 = document.getElementById("teacher1").value;
+    var teacher2 = document.getElementById("teacher2").value;
+
+    // Determine pronouns based on student gender
+    if (gender == "Female") {
+      var Ugender1 = "She";
+      var Lgender1 = "she";
+      var gender2 = "her";
+    } else if (gender == "Male") {
+      var Ugender1 = "He";
+      var Lgender1 = "he";
+      var gender2 = "his";
+    } else {
+      var Ugender1 = "They";
+      var Lgender1 = "they";
+      var gender2 = "their";
+    }
+
+    // if statements to determine intro ending based on the type of class
+    var class_location;
+    if (classType == "virtual") {
+      class_location = `recently attended on ${date}`;
+    } else {
+      class_location = `recently attended on ${date} at ${school}`;
+    }
+
+    if (templateValue == "SAT") {
+      get_SAT_Template(
+        Sname,
+        Lname,
+        title,
+        Ugender1,
+        Lgender1,
+        gender2,
+        teacher1,
+        teacher2,
+        class_location
+      );
+    } else if (templateValue == "CollegeEssay") {
+    } else if (templateValue == "ACT") {
+    }
   } else {
-    var Ugender1 = "They";
-    var Lgender1 = "they";
-    var gender2 = "their";
+    errorMsg.textContent = "Please select a template option."; // Display an error message
   }
-
-  // if statements to determine intro ending based on the type of class
-  var class_location;
-  if (classType == "virtual") {
-    class_location = `recently attended on ${date}`;
-  } else {
-    class_location = `recently attended on ${date} at ${school}`;
-  }
-
-  get_SAT_Template(
-    Sname,
-    Lname,
-    title,
-    Ugender1,
-    Lgender1,
-    gender2,
-    teacher1,
-    teacher2,
-    class_location
-  );
 }
 
 function get_SAT_Template(
@@ -122,24 +137,6 @@ function replacePlaceholders(
     );
 }
 
-// function highlightPlaceholders() {
-//   var placeholders = document.querySelectorAll(".placeholder");
-
-//   // Add highlight class with a delay
-//   setTimeout(() => {
-//     placeholders.forEach((placeholder) => {
-//       placeholder.classList.add("highlight");
-//     });
-//   }, 150); // Delay for fade-in effect
-
-//   // Remove highlight class after a delay
-//   setTimeout(() => {
-//     placeholders.forEach((placeholder) => {
-//       placeholder.classList.remove("highlight");
-//     });
-//   }, 2000); // Delay for fade-out effect (50ms more than the fade-in)
-// }
-
 function highlightPlaceholders() {
   var placeholders = document.querySelectorAll(".placeholder");
   placeholders.forEach((placeholder) => {
@@ -151,7 +148,7 @@ function highlightPlaceholders() {
     placeholders.forEach((placeholder) => {
       placeholder.classList.remove("highlight");
     });
-  }, 2500); // Adjust the delay as needed
+  }, 2000); // Adjust the delay as needed
 }
 
 function formatHeadings(data) {
