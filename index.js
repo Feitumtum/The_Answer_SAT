@@ -41,38 +41,36 @@ function getAndSetVal() {
       class_location = `recently attended on ${date} at ${school}`;
     }
 
+    // determine which after class email template to use
     if (templateValue == "SAT") {
-      get_SAT_Template(
-        Sname,
-        Lname,
-        title,
-        Ugender1,
-        Lgender1,
-        gender2,
-        teacher1,
-        teacher2,
-        class_location
-      );
+      templateURL =
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/DigitalSATTemplate.txt";
     } else if (templateValue == "CollegeEssay") {
-      get_College_Essay_Template(
-        Sname,
-        Lname,
-        title,
-        Ugender1,
-        Lgender1,
-        gender2,
-        teacher1,
-        teacher2,
-        class_location
-      );
+      templateURL =
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/CollegeEssayTemplate.txt";
     } else if (templateValue == "ACT") {
+      templateURL =
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/ACTTemplate.txt";
     }
+
+    fill_in_template(
+      Sname,
+      Lname,
+      title,
+      Ugender1,
+      Lgender1,
+      gender2,
+      teacher1,
+      teacher2,
+      class_location,
+      templateURL
+    );
   } else {
     errorMsg.textContent = "Please select a template option."; // Display an error message
   }
 }
 
-function get_SAT_Template(
+function fill_in_template(
   Sname,
   Lname,
   title,
@@ -81,53 +79,10 @@ function get_SAT_Template(
   gender2,
   teacher1,
   teacher2,
-  class_location
+  class_location,
+  templateURL
 ) {
-  fetch(
-    "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/DigitalSATTemplate.txt"
-  )
-    .then((response) => response.text())
-    .then((data) => {
-      // Exchange the variables
-      data = replacePlaceholders(
-        data,
-        Sname,
-        Lname,
-        title,
-        Ugender1,
-        Lgender1,
-        gender2,
-        teacher1,
-        teacher2,
-        class_location
-      );
-
-      var formattedData = data.replace(/\n/g, "<br>"); // Retain paragraph structure
-      var bold_sub_headings = formatHeadings(formattedData); // Make Paragraph headings bold
-      var hyperlinked_text = addHyperlinks(bold_sub_headings); // Adding Hyperlinks
-
-      // Display the text onto the website
-      document.getElementById("OUTPUT").innerHTML = hyperlinked_text;
-      document.getElementById("OUTPUT");
-      highlightPlaceholders(); // Highlight replaced placeholders
-    })
-    .catch((error) => console.error("Error fetching file:", error));
-}
-
-function get_College_Essay_Template(
-  Sname,
-  Lname,
-  title,
-  Ugender1,
-  Lgender1,
-  gender2,
-  teacher1,
-  teacher2,
-  class_location
-) {
-  fetch(
-    "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/CollegeEssayTemplate.txt"
-  )
+  fetch(templateURL)
     .then((response) => response.text())
     .then((data) => {
       // Exchange the variables
@@ -195,7 +150,7 @@ function highlightPlaceholders() {
     placeholders.forEach((placeholder) => {
       placeholder.classList.remove("highlight");
     });
-  }, 2000); // Adjust the delay as needed
+  }, 100000); // Adjust the delay as needed
 }
 
 function formatHeadings(data) {

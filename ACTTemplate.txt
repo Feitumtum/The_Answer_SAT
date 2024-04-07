@@ -2,7 +2,7 @@ Subject Line: Thank You for Sending {Sname} to ACT Prep Class!
 
 Dear {title} {Lname},
 
-We hope this note finds you well. On behalf of The Answer Class, we would like to give you an update on the progress that {Sname} made at the ACT workshop that {Ugender1} {recently attended}.
+We hope this note finds you well. On behalf of The Answer Class, we would like to give you an update on the progress that {Sname} made at the ACT workshop that {Lgender1} {recently attended}.
 
 {Sname} was an excellent student. {Ugender1} mastered helpful test-taking strategies by making a good effort to engage with the material. {Ugender1} worked hard, contributed to discussions with classmates, and asked insightful questions. We know that ACT practice might not be {gender2} ideal way to spend a few free hours, but {Sname} had a positive attitude and made the most of our time together. 
 
