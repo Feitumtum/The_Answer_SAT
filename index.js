@@ -91,21 +91,56 @@ function get_SAT_Template(
         class_location
       );
 
-      // Retain paragraph structure
-      var formattedData = data.replace(/\n/g, "<br>");
-
-      // Make Paragraph headings bold
-      var bold_sub_headings = formatHeadings(formattedData);
-
-      // Adding Hyperlinks
-      var hyperlinked_text = addHyperlinks(bold_sub_headings);
+      var formattedData = data.replace(/\n/g, "<br>"); // Retain paragraph structure
+      var bold_sub_headings = formatHeadings(formattedData); // Make Paragraph headings bold
+      var hyperlinked_text = addHyperlinks(bold_sub_headings); // Adding Hyperlinks
 
       // Display the text onto the website
       document.getElementById("OUTPUT").innerHTML = hyperlinked_text;
       document.getElementById("OUTPUT");
+      highlightPlaceholders(); // Highlight replaced placeholders
+    })
+    .catch((error) => console.error("Error fetching file:", error));
+}
 
-      // Highlight replaced placeholders
-      highlightPlaceholders();
+function get_College_Essay_Template(
+  Sname,
+  Lname,
+  title,
+  Ugender1,
+  Lgender1,
+  gender2,
+  teacher1,
+  teacher2,
+  class_location
+) {
+  fetch(
+    "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/DigitalSATTemplate.txt"
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      // Exchange the variables
+      data = replacePlaceholders(
+        data,
+        Sname,
+        Lname,
+        title,
+        Ugender1,
+        Lgender1,
+        gender2,
+        teacher1,
+        teacher2,
+        class_location
+      );
+
+      var formattedData = data.replace(/\n/g, "<br>"); // Retain paragraph structure
+      var bold_sub_headings = formatHeadings(formattedData); // Make Paragraph headings bold
+      var hyperlinked_text = addHyperlinks(bold_sub_headings); // Adding Hyperlinks
+
+      // Display the text onto the website
+      document.getElementById("OUTPUT").innerHTML = hyperlinked_text;
+      document.getElementById("OUTPUT");
+      highlightPlaceholders(); // Highlight replaced placeholders
     })
     .catch((error) => console.error("Error fetching file:", error));
 }
@@ -192,6 +227,28 @@ function addHyperlinks(data) {
       "Instagram",
       '<a href="https://www.instagram.com/theanswerclass/">Facebook</a>'
     );
+}
+
+function addBulletPoints(data) {
+  var bulletPoints = data.match(/\{bulletPoint\}/g); // Get all occurrences of {bulletPoint}
+  if (bulletPoints) {
+    // Insert <ul> before the first occurrence
+    var firstIndex = data.indexOf("{bulletPoint}");
+    data = data.slice(0, firstIndex) + "<ul>" + data.slice(firstIndex);
+
+    // Insert </ul> after the last occurrence
+    var lastIndex = data.lastIndexOf("{bulletPoint}");
+    data =
+      data.slice(0, lastIndex + "{bulletPoint}".length) +
+      "</ul>" +
+      data.slice(lastIndex + "{bulletPoint}".length);
+
+    // Replace all occurrences of {bulletPoint} with <li>
+    var formattedData = data.replace(/\{bulletPoint\}/g, "<li>");
+    return formattedData;
+  } else {
+    return data;
+  }
 }
 
 function copyText() {
