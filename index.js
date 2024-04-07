@@ -5,7 +5,6 @@ function getAndSetVal() {
 
   if (templateOption) {
     var templateValue = templateOption.value;
-    console.log(templateValue);
     errorMsg.textContent = ""; // Clear error message if an option is selected
 
     // Get the inputs from website
@@ -48,13 +47,13 @@ function getAndSetVal() {
     // determine which after class email template to use
     if (templateValue == "SAT") {
       templateURL =
-        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/DigitalSATTemplate.txt";
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/main/EmailTemplates/DigitalSATTemplate.txt";
     } else if (templateValue == "CollegeEssay") {
       templateURL =
-        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/CollegeEssayTemplate.txt";
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/main/EmailTemplates/CollegeEssayTemplate.txt";
     } else if (templateValue == "ACT") {
       templateURL =
-        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/ACTTemplate.txt";
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/main/EmailTemplates/ACTTemplate.txt";
     }
 
     // function to fetch and fill the template --> and then post on website
