@@ -54,6 +54,17 @@ function getAndSetVal() {
         class_location
       );
     } else if (templateValue == "CollegeEssay") {
+      get_College_Essay_Template(
+        Sname,
+        Lname,
+        title,
+        Ugender1,
+        Lgender1,
+        gender2,
+        teacher1,
+        teacher2,
+        class_location
+      );
     } else if (templateValue == "ACT") {
     }
   } else {
@@ -115,7 +126,7 @@ function get_College_Essay_Template(
   class_location
 ) {
   fetch(
-    "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/DigitalSATTemplate.txt"
+    "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/CollegeEssayTemplate.txt"
   )
     .then((response) => response.text())
     .then((data) => {
@@ -134,7 +145,8 @@ function get_College_Essay_Template(
       );
 
       var formattedData = data.replace(/\n/g, "<br>"); // Retain paragraph structure
-      var bold_sub_headings = formatHeadings(formattedData); // Make Paragraph headings bold
+      var bulletPoints = addBulletPoints(formattedData); // Add bullet points
+      var bold_sub_headings = formatHeadings(bulletPoints); // Make Paragraph headings bold
       var hyperlinked_text = addHyperlinks(bold_sub_headings); // Adding Hyperlinks
 
       // Display the text onto the website
@@ -233,18 +245,19 @@ function addBulletPoints(data) {
   var bulletPoints = data.match(/\{bulletPoint\}/g); // Get all occurrences of {bulletPoint}
   if (bulletPoints) {
     // Insert <ul> before the first occurrence
-    var firstIndex = data.indexOf("{bulletPoint}");
-    data = data.slice(0, firstIndex) + "<ul>" + data.slice(firstIndex);
+    var firstIndex = data.indexOf("{bulletPoint}"); // Get index of first bulletPoint
+    data = data.slice(0, firstIndex) + "<ul>" + data.slice(firstIndex); //
 
     // Insert </ul> after the last occurrence
-    var lastIndex = data.lastIndexOf("{bulletPoint}");
+    var endIndex = data.indexOf("{bulletPointsEnd}");
     data =
-      data.slice(0, lastIndex + "{bulletPoint}".length) +
+      data.slice(0, endIndex + "{bulletPointsEnd}".length) +
       "</ul>" +
-      data.slice(lastIndex + "{bulletPoint}".length);
+      data.slice(endIndex + "{bulletPointsEnd}".length);
 
     // Replace all occurrences of {bulletPoint} with <li>
     var formattedData = data.replace(/\{bulletPoint\}/g, "<li>");
+    console.log(formattedData);
     return formattedData;
   } else {
     return data;
