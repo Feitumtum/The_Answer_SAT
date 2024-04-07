@@ -23,7 +23,7 @@ button:active {
   transform: translateY(4px);
 }
 
-myinput {
+.myinput {
   display: block;
   width: 100%;
 }
@@ -132,4 +132,18 @@ h1 {
 .highlight {
   background-color: yellow;
   transition: background-color 0.5s ease-in-out; /* Adjust the transition timing and easing function as needed */
+}
+
+.copy-message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #666; /* Gray color */
+  font-style: italic; /* Italicize the text */
 }

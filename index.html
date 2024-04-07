@@ -40,7 +40,7 @@
           Click the green <span style="color:rgb(253, 253, 253);background-color:#3e8e41">"COPY</span> button to copy to clipboard
           <ul>
             <li> You can use Ctrl + V to paste into your email </li>
-            <li> <u><b>Remove the Email Subject text after Ctrl + V</b></u></li>
+            <li> <u><b>Move the Email Subject text after Ctrl + V</b></u></li>
           </ul>
         </div>
       </div>
@@ -119,8 +119,9 @@
     </form>
   
   <button class="button", onClick="getAndSetVal();">SUBMIT</button><br></br>
-  
-  <button class="button", onclick="copyText();">COPY</button>
+
+  <button id="copyButton" class="button" onclick="copyText();">COPY</button>
+  <div id="copyMessage"style="display: none; color: red; font-style: italic; font-weight: bold;"></div>
   
   <br>
   

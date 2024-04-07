@@ -1,4 +1,5 @@
 function getAndSetVal() {
+  // get which template was chosen
   var templateOption = document.querySelector('input[name="template"]:checked');
   var errorMsg = document.getElementById("error-msg");
 
@@ -7,6 +8,7 @@ function getAndSetVal() {
     console.log(templateValue);
     errorMsg.textContent = ""; // Clear error message if an option is selected
 
+    // Get the inputs from website
     var studentName = document.getElementById("studentName").value;
     var parentName = document.getElementById("parentName").value;
     var gender = document.getElementById("gender").value;
@@ -18,20 +20,6 @@ function getAndSetVal() {
     var teacher2 = document.getElementById("teacher2").value;
 
     // Determine pronouns based on student gender
-    if (gender == "Female") {
-      var He_She_They = "She";
-      var he_she_they = "she";
-      var his_her_their = "her";
-    } else if (gender == "Male") {
-      var He_She_They = "He";
-      var he_she_they = "he";
-      var his_her_their = "his";
-    } else {
-      var He_She_They = "They";
-      var he_she_they = "they";
-      var his_her_their = "their";
-    }
-
     if (gender == "Male") {
       var He_She_They = "He";
       var he_she_they = "he";
@@ -49,7 +37,7 @@ function getAndSetVal() {
       var him_her_them = "them";
     }
 
-    // if statements to determine intro ending based on the type of class
+    // if statements to determine intro ending based on if the class was virtual or in person
     var class_location;
     if (classType == "virtual") {
       class_location = `recently attended on ${date}`;
@@ -69,6 +57,7 @@ function getAndSetVal() {
         "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/ACTTemplate.txt";
     }
 
+    // function to fetch and fill the template --> and then post on website
     fill_in_template(
       studentName,
       parentName,
@@ -82,10 +71,11 @@ function getAndSetVal() {
       templateURL
     );
   } else {
-    errorMsg.textContent = "Please select a template option."; // Display an error message
+    errorMsg.textContent = "Please select a template option."; // Display an error message if no template was chosen
   }
 }
 
+// Function that takes in inputs and replaces the placeholders in the template
 function fill_in_template(
   studentName,
   parentName,
@@ -101,7 +91,7 @@ function fill_in_template(
   fetch(templateURL)
     .then((response) => response.text())
     .then((data) => {
-      // Exchange the variables
+      // Exchange the basic variables
       data = replacePlaceholders(
         data,
         studentName,
@@ -128,6 +118,7 @@ function fill_in_template(
     .catch((error) => console.error("Error fetching file:", error));
 }
 
+// Function that replaces text in the templates with the input variables
 function replacePlaceholders(
   data,
   studentName,
@@ -170,20 +161,7 @@ function replacePlaceholders(
     );
 }
 
-function highlightPlaceholders() {
-  var placeholders = document.querySelectorAll(".placeholder");
-  placeholders.forEach((placeholder) => {
-    placeholder.classList.add("highlight");
-  });
-
-  // Remove highlighting after a short delay
-  setTimeout(() => {
-    placeholders.forEach((placeholder) => {
-      placeholder.classList.remove("highlight");
-    });
-  }, 1500); // Adjust the delay as needed
-}
-
+// Function that makes the paragraph headings bold
 function formatHeadings(data) {
   return data.replace(
     /(Let’s Be Friends on Socials!|The Answer Class Affordable College Admissions Support)/g,
@@ -191,6 +169,7 @@ function formatHeadings(data) {
   );
 }
 
+// Function that changes texts to hyperlinks
 function addHyperlinks(data) {
   return data
     .replace(
@@ -227,6 +206,7 @@ function addHyperlinks(data) {
     );
 }
 
+// Function that replaces the bulletpoint placeholders and formats into html list
 function addBulletPoints(data) {
   var bulletPoints = data.match("{bulletPoint}"); // Get all occurrences of {bulletPoint}
 
@@ -240,6 +220,21 @@ function addBulletPoints(data) {
   }
 }
 
+// Function that highlights the text that changes when the user submits
+function highlightPlaceholders() {
+  var placeholders = document.querySelectorAll(".placeholder");
+  placeholders.forEach((placeholder) => {
+    placeholder.classList.add("highlight");
+  });
+
+  // Remove highlighting after a short delay
+  setTimeout(() => {
+    placeholders.forEach((placeholder) => {
+      placeholder.classList.remove("highlight");
+    });
+  }, 3000); // Adjust the delay as needed
+}
+
 function copyText() {
   var r = document.createRange();
   r.selectNode(document.getElementById("AllOutput"));
@@ -247,7 +242,16 @@ function copyText() {
   window.getSelection().addRange(r);
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
-  alert(" Copied to Clipboard, use Ctrl + V to paste");
+
+  // Show copy message
+  var copyMessage = document.getElementById("copyMessage");
+  copyMessage.textContent = "Copied to Clipboard, use Ctrl + V to paste";
+  copyMessage.style.display = "block";
+
+  // Hide message after 2 seconds
+  setTimeout(function () {
+    copyMessage.style.display = "none";
+  }, 3000);
 }
 
 function validateForm() {
