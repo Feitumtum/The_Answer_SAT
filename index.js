@@ -78,8 +78,20 @@ function getAndSetVal() {
         '<a href="https://theanswerclass.com/college-admissions-crash-courses-and-11-college-application-support/#one-one-college-support-parents">1:1 College Admissions Support for Parents</a>'
       );
       hyperlinked_text = hyperlinked_text.replace(
-        "1:1 College Application & Accountatiblity Support for Students",
-        '<a href="https://theanswerclass.com/college-admissions-crash-courses-and-11-college-application-support/#one-one-college-application-for-students">1:1 College Application & Accountatiblity Support for Students</a>'
+        "1:1 College Application & Accountability Support for Students",
+        '<a href="https://theanswerclass.com/college-admissions-crash-courses-and-11-college-application-support/#one-one-college-application-for-students">1:1 College Application & Accountability Support for Students</a>'
+      );
+      hyperlinked_text = hyperlinked_text.replace(
+        "premium bundle",
+        '<a href="https://theanswerclass.com/answer-satact-combo-package/">premium bundle</a>'
+      );
+      hyperlinked_text = hyperlinked_text.replace(
+        "Facebook",
+        '<a href="https://www.facebook.com/theanswerclass/?ref=hl">Facebook</a>'
+      );
+      hyperlinked_text = hyperlinked_text.replace(
+        "Instagram",
+        '<a href="https://www.instagram.com/theanswerclass/">Facebook</a>'
       );
 
       // Display the text onto the website
