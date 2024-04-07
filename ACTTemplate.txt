@@ -1,12 +1,12 @@
-Subject Line: Thank You for Sending {Sname} to ACT Prep Class!
+Thank You for Sending {studentName} to ACT Prep Class!
 
-Dear {title} {Lname},
+Dear {parentName},
 
-We hope this note finds you well. On behalf of The Answer Class, we would like to give you an update on the progress that {Sname} made at the ACT workshop that {Lgender1} {recently attended}.
+We hope this note finds you well. On behalf of The Answer Class, we would like to give you an update on the progress that {studentName} made at the ACT workshop that {he_she_they} {recently attended}.
 
-{Sname} was an excellent student. {Ugender1} mastered helpful test-taking strategies by making a good effort to engage with the material. {Ugender1} worked hard, contributed to discussions with classmates, and asked insightful questions. We know that ACT practice might not be {gender2} ideal way to spend a few free hours, but {Sname} had a positive attitude and made the most of our time together. 
+{studentName} was an excellent student. {He_She_They} mastered helpful test-taking strategies by making a good effort to engage with the material. {He_She_They} worked hard, contributed to discussions with classmates, and asked insightful questions. We know that ACT practice might not be {his_her_their} ideal way to spend a few free hours, but {studentName} had a positive attitude and made the most of our time together. 
 
-For each of the ACT’s sections — English, Reading, Math, Science, and the optional Essay — {Sname} learned about the format and content of the test and practiced solving questions to prepare for test day. We thank you for supporting {gender2} preparation efforts by having {gender2} attend class.
+For each of the ACT’s sections — English, Reading, Math, Science, and the optional Essay — {studentName} learned about the format and content of the test and practiced solving questions to prepare for test day. We thank you for supporting {his_her_their} preparation efforts by having {him_her_them} attend class.
 
 Learning to master the ACT is a bit like learning to drive a car: practice is the name of the game. No one is born knowing how to drive and no one should expect to get it perfect right away — it takes hours of practice and dedication until students can get the hang of it. Though the subject matter might differ, taking the ACT is more like a driver’s test than a math class quiz. Unlike with tests in school, it’s impossible to study (or cram) a few textbook chapters of content to understand the material and get a good score. Instead, the best thing students can do is prepare by completing practice problems, or better yet practice tests, using the strategies and tips learned in class. 
 
@@ -14,7 +14,7 @@ Students often show up to the first session dreading the test as a confusing, di
 
 Students can refer back to the strategies we covered in The Answer Class ACT Student Guide. During at-home practice sessions, students can review their personal plans they wrote for each section in the student guide. 
 
-Ultimately, all students will get accepted into the college that is right for them. {Sname} has a plethora of options where {Lgender1} will thrive. 
+Ultimately, all students will get accepted into the college that is right for them. {studentName} has a plethora of options where {he_she_they} will thrive. 
 
 The Answer Class Affordable College Admissions Support
 

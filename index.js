@@ -7,9 +7,8 @@ function getAndSetVal() {
     console.log(templateValue);
     errorMsg.textContent = ""; // Clear error message if an option is selected
 
-    var Sname = document.getElementById("Sname").value;
-    var Lname = document.getElementById("Lname").value;
-    var title = document.getElementById("title").value;
+    var studentName = document.getElementById("studentName").value;
+    var parentName = document.getElementById("parentName").value;
     var gender = document.getElementById("gender").value;
 
     var school = document.getElementById("school").value;
@@ -20,17 +19,34 @@ function getAndSetVal() {
 
     // Determine pronouns based on student gender
     if (gender == "Female") {
-      var Ugender1 = "She";
-      var Lgender1 = "she";
-      var gender2 = "her";
+      var He_She_They = "She";
+      var he_she_they = "she";
+      var his_her_their = "her";
     } else if (gender == "Male") {
-      var Ugender1 = "He";
-      var Lgender1 = "he";
-      var gender2 = "his";
+      var He_She_They = "He";
+      var he_she_they = "he";
+      var his_her_their = "his";
     } else {
-      var Ugender1 = "They";
-      var Lgender1 = "they";
-      var gender2 = "their";
+      var He_She_They = "They";
+      var he_she_they = "they";
+      var his_her_their = "their";
+    }
+
+    if (gender == "Male") {
+      var He_She_They = "He";
+      var he_she_they = "he";
+      var his_her_their = "his";
+      var him_her_them = "him";
+    } else if (gender == "Female") {
+      var He_She_They = "She";
+      var he_she_they = "she";
+      var his_her_their = "her";
+      var him_her_them = "her";
+    } else {
+      var He_She_They = "They";
+      var he_she_they = "they";
+      var his_her_their = "their";
+      var him_her_them = "them";
     }
 
     // if statements to determine intro ending based on the type of class
@@ -54,12 +70,12 @@ function getAndSetVal() {
     }
 
     fill_in_template(
-      Sname,
-      Lname,
-      title,
-      Ugender1,
-      Lgender1,
-      gender2,
+      studentName,
+      parentName,
+      He_She_They,
+      he_she_they,
+      his_her_their,
+      him_her_them,
       teacher1,
       teacher2,
       class_location,
@@ -71,12 +87,12 @@ function getAndSetVal() {
 }
 
 function fill_in_template(
-  Sname,
-  Lname,
-  title,
-  Ugender1,
-  Lgender1,
-  gender2,
+  studentName,
+  parentName,
+  He_She_They,
+  he_she_they,
+  his_her_their,
+  him_her_them,
   teacher1,
   teacher2,
   class_location,
@@ -88,12 +104,12 @@ function fill_in_template(
       // Exchange the variables
       data = replacePlaceholders(
         data,
-        Sname,
-        Lname,
-        title,
-        Ugender1,
-        Lgender1,
-        gender2,
+        studentName,
+        parentName,
+        He_She_They,
+        he_she_they,
+        his_her_their,
+        him_her_them,
         teacher1,
         teacher2,
         class_location
@@ -114,23 +130,38 @@ function fill_in_template(
 
 function replacePlaceholders(
   data,
-  Sname,
-  Lname,
-  title,
-  Ugender1,
-  Lgender1,
-  gender2,
+  studentName,
+  parentName,
+  He_She_They,
+  he_she_they,
+  his_her_their,
+  him_her_them,
   teacher1,
   teacher2,
   class_location
 ) {
   return data
-    .replace(/{Sname}/g, `<span class="placeholder">${Sname}</span>`)
-    .replace(/{Lname}/g, `<span class="placeholder">${Lname}</span>`)
-    .replace(/{title}/g, `<span class="placeholder">${title}</span>`)
-    .replace(/{Ugender1}/g, `<span class="placeholder">${Ugender1}</span>`)
-    .replace(/{Lgender1}/g, `<span class="placeholder">${Lgender1}</span>`)
-    .replace(/{gender2}/g, `<span class="placeholder">${gender2}</span>`)
+    .replace(
+      /{studentName}/g,
+      `<span class="placeholder">${studentName}</span>`
+    )
+    .replace(/{parentName}/g, `<span class="placeholder">${parentName}</span>`)
+    .replace(
+      /{He_She_They}/g,
+      `<span class="placeholder">${He_She_They}</span>`
+    )
+    .replace(
+      /{he_she_they}/g,
+      `<span class="placeholder">${he_she_they}</span>`
+    )
+    .replace(
+      /{his_her_their}/g,
+      `<span class="placeholder">${his_her_their}</span>`
+    )
+    .replace(
+      /{him_her_them}/g,
+      `<span class="placeholder">${him_her_them}</span>`
+    )
     .replace(/{teacher1}/g, `<span class="placeholder">${teacher1}</span>`)
     .replace(/{teacher2}/g, `<span class="placeholder">${teacher2}</span>`)
     .replace(
@@ -150,7 +181,7 @@ function highlightPlaceholders() {
     placeholders.forEach((placeholder) => {
       placeholder.classList.remove("highlight");
     });
-  }, 100000); // Adjust the delay as needed
+  }, 1500); // Adjust the delay as needed
 }
 
 function formatHeadings(data) {
@@ -192,7 +223,7 @@ function addHyperlinks(data) {
     )
     .replace(
       "Instagram",
-      '<a href="https://www.instagram.com/theanswerclass/">Facebook</a>'
+      '<a href="https://www.instagram.com/theanswerclass/">Instagram</a>'
     );
 }
 

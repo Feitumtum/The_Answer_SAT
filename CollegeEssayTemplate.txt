@@ -1,10 +1,10 @@
-Thank You for Sending {Sname} to The Answer College Essay Writing Workshop!
+Thank You for Sending {studentName} to The Answer College Essay Writing Workshop!
 
-Dear {title} {Lname},
+Dear {parentName},
 
-Hope you are doing well. We are writing to update you on the College Essay Writing Workshop that {Sname} {recently attended}.  
+Hope you are doing well. We are writing to update you on the College Essay Writing Workshop that {studentName} {recently attended}.  
 
-{Sname} was a pleasure to have in class. {Ugender1} were interested, involved, and engaged. {Ugender1} participated in all of the activities, collaborated well with others, and wrote a lot! Understanding the context of the college essays and then brainstorming, drafting, writing, and editing is not what most teenagers do for fun, but {Sname} did a great job of making it worthwhile. 
+{studentName} was a pleasure to have in class. {He_She_They} were interested, involved, and engaged. {He_She_They} participated in all of the activities, collaborated well with others, and wrote a lot! Understanding the context of the college essays and then brainstorming, drafting, writing, and editing is not what most teenagers do for fun, but {studentName} did a great job of making it worthwhile. 
 
 In the workshop, the students…
 {FirstBulletPoint} Brainstormed individually and collaboratively: They participated in activities to help them think through their life experiences and find topics that are both true to themselves and interesting and relevant to the essay readers. 
