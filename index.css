@@ -127,3 +127,9 @@ h1 {
   margin: 10px;
   padding: 5px;
 }
+
+/* CSS for highlighting changes submitted*/
+.highlight {
+  background-color: yellow;
+  transition: background-color 0.5s ease-in-out; /* Adjust the transition timing and easing function as needed */
+}

@@ -62,8 +62,6 @@ function get_SAT_Template(
   )
     .then((response) => response.text())
     .then((data) => {
-      alert("Changed Applied!");
-
       // Exchange the variables
       data = replacePlaceholders(
         data,
@@ -89,9 +87,10 @@ function get_SAT_Template(
 
       // Display the text onto the website
       document.getElementById("OUTPUT").innerHTML = hyperlinked_text;
-      document
-        .getElementById("OUTPUT")
-        .appendChild(document.getElementById("logo"));
+      document.getElementById("OUTPUT");
+
+      // Highlight replaced placeholders
+      highlightPlaceholders();
     })
     .catch((error) => console.error("Error fetching file:", error));
 }
@@ -109,15 +108,50 @@ function replacePlaceholders(
   class_location
 ) {
   return data
-    .replace(/{Sname}/g, Sname)
-    .replace(/{Lname}/g, Lname)
-    .replace(/{title}/g, title)
-    .replace(/{Ugender1}/g, Ugender1)
-    .replace(/{Lgender1}/g, Lgender1)
-    .replace(/{gender2}/g, gender2)
-    .replace(/{teacher1}/g, teacher1)
-    .replace(/{teacher2}/g, teacher2)
-    .replace(/{recently attended}/g, class_location);
+    .replace(/{Sname}/g, `<span class="placeholder">${Sname}</span>`)
+    .replace(/{Lname}/g, `<span class="placeholder">${Lname}</span>`)
+    .replace(/{title}/g, `<span class="placeholder">${title}</span>`)
+    .replace(/{Ugender1}/g, `<span class="placeholder">${Ugender1}</span>`)
+    .replace(/{Lgender1}/g, `<span class="placeholder">${Lgender1}</span>`)
+    .replace(/{gender2}/g, `<span class="placeholder">${gender2}</span>`)
+    .replace(/{teacher1}/g, `<span class="placeholder">${teacher1}</span>`)
+    .replace(/{teacher2}/g, `<span class="placeholder">${teacher2}</span>`)
+    .replace(
+      /{recently attended}/g,
+      `<span class="placeholder">${class_location}</span>`
+    );
+}
+
+// function highlightPlaceholders() {
+//   var placeholders = document.querySelectorAll(".placeholder");
+
+//   // Add highlight class with a delay
+//   setTimeout(() => {
+//     placeholders.forEach((placeholder) => {
+//       placeholder.classList.add("highlight");
+//     });
+//   }, 150); // Delay for fade-in effect
+
+//   // Remove highlight class after a delay
+//   setTimeout(() => {
+//     placeholders.forEach((placeholder) => {
+//       placeholder.classList.remove("highlight");
+//     });
+//   }, 2000); // Delay for fade-out effect (50ms more than the fade-in)
+// }
+
+function highlightPlaceholders() {
+  var placeholders = document.querySelectorAll(".placeholder");
+  placeholders.forEach((placeholder) => {
+    placeholder.classList.add("highlight");
+  });
+
+  // Remove highlighting after a short delay
+  setTimeout(() => {
+    placeholders.forEach((placeholder) => {
+      placeholder.classList.remove("highlight");
+    });
+  }, 2500); // Adjust the delay as needed
 }
 
 function formatHeadings(data) {
