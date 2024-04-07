@@ -242,23 +242,13 @@ function addHyperlinks(data) {
 }
 
 function addBulletPoints(data) {
-  var bulletPoints = data.match(/\{bulletPoint\}/g); // Get all occurrences of {bulletPoint}
+  var bulletPoints = data.match("{bulletPoint}"); // Get all occurrences of {bulletPoint}
+
   if (bulletPoints) {
-    // Insert <ul> before the first occurrence
-    var firstIndex = data.indexOf("{bulletPoint}"); // Get index of first bulletPoint
-    data = data.slice(0, firstIndex) + "<ul>" + data.slice(firstIndex); //
-
-    // Insert </ul> after the last occurrence
-    var endIndex = data.indexOf("{bulletPointsEnd}");
-    data =
-      data.slice(0, endIndex + "{bulletPointsEnd}".length) +
-      "</ul>" +
-      data.slice(endIndex + "{bulletPointsEnd}".length);
-
-    // Replace all occurrences of {bulletPoint} with <li>
-    var formattedData = data.replace(/\{bulletPoint\}/g, "<li>");
-    console.log(formattedData);
-    return formattedData;
+    data = data.replace("{FirstBulletPoint}", "<ul> <li>");
+    data = data.replace(/\{bulletPoint\}/g, "<li>");
+    data = data.replace("{bulletPointsEnd}", "</ul>");
+    return data;
   } else {
     return data;
   }

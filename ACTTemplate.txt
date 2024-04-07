@@ -1,0 +1,35 @@
+Subject Line: Thank You for Sending {Sname} to ACT Prep Class!
+
+Dear {title} {Lname},
+
+We hope this note finds you well. On behalf of The Answer Class, we would like to give you an update on the progress that {Sname} made at the ACT workshop that {Ugender1} {recently attended}.
+
+{Sname} was an excellent student. {Ugender1} mastered helpful test-taking strategies by making a good effort to engage with the material. {Ugender1} worked hard, contributed to discussions with classmates, and asked insightful questions. We know that ACT practice might not be {gender2} ideal way to spend a few free hours, but {Sname} had a positive attitude and made the most of our time together. 
+
+For each of the ACT’s sections — English, Reading, Math, Science, and the optional Essay — {Sname} learned about the format and content of the test and practiced solving questions to prepare for test day. We thank you for supporting {gender2} preparation efforts by having {gender2} attend class.
+
+Learning to master the ACT is a bit like learning to drive a car: practice is the name of the game. No one is born knowing how to drive and no one should expect to get it perfect right away — it takes hours of practice and dedication until students can get the hang of it. Though the subject matter might differ, taking the ACT is more like a driver’s test than a math class quiz. Unlike with tests in school, it’s impossible to study (or cram) a few textbook chapters of content to understand the material and get a good score. Instead, the best thing students can do is prepare by completing practice problems, or better yet practice tests, using the strategies and tips learned in class. 
+
+Students often show up to the first session dreading the test as a confusing, difficult chore. It’s true that the ACT is longer than other tests they’ve taken, and the questions may be asked in different ways than students are used to. With the ACT in particular, time pressure is high — students have between 30-60 seconds on average to answer each question. The good news is, they’ve already learned the vast majority of the test content in their classes. Now that your student knows the ACT “rules of the road,” they will start to develop a test-taking rhythm that balances speed and accuracy. 
+
+Students can refer back to the strategies we covered in The Answer Class ACT Student Guide. During at-home practice sessions, students can review their personal plans they wrote for each section in the student guide. 
+
+Ultimately, all students will get accepted into the college that is right for them. {Sname} has a plethora of options where {Lgender1} will thrive. 
+
+The Answer Class Affordable College Admissions Support
+
+As you may know, in addition to test prep, we offer a full suite of affordable college admissions offerings: College Admissions Crash Courses, College Essay Writing Workshops, a Personalized College List Service, 1:1 College Admissions Support for Parents, and 1:1 College Application & Accountability Support for Students. 
+
+You choose the premium bundle that works for your family – so that you can best position your child for a successful college admissions cycle – all without breaking the bank!
+
+Let’s Be Friends on Socials!
+
+We also invite you to like us on Facebook and follow us on Instagram! 
+
+We thank you for the opportunity to have worked with your child. If you have any questions or if there is anything else that we can do for you, please let us know. 
+
+Be well, 
+
+{teacher1}
+
+{teacher2}
