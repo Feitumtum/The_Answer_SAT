@@ -48,13 +48,13 @@ function getAndSetVal() {
     // determine which after class email template to use
     if (templateValue == "SAT") {
       templateURL =
-        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/DigitalSATTemplate.txt";
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/EmailTemplates/DigitalSATTemplate.txt";
     } else if (templateValue == "CollegeEssay") {
       templateURL =
-        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/CollegeEssayTemplate.txt";
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/EmailTemplates/CollegeEssayTemplate.txt";
     } else if (templateValue == "ACT") {
       templateURL =
-        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/Add-New-Templates/ACTTemplate.txt";
+        "https://docs.google.com/document/d/e/2PACX-1vQWaMdQZwKje7PohTLYUquauvUmkJSJQft16ZAlmiS54Vis7YYSbkX3aJih6zlLInUz-SbcajpYdpgk/pub";
     }
 
     // function to fetch and fill the template --> and then post on website
