@@ -24,16 +24,19 @@ function getAndSetVal() {
       var he_she_they = "he";
       var his_her_their = "his";
       var him_her_them = "him";
+      var himself_herself_themself = "himself";
     } else if (gender == "Female") {
       var He_She_They = "She";
       var he_she_they = "she";
       var his_her_their = "her";
       var him_her_them = "her";
+      var himself_herself_themself = "herself";
     } else {
       var He_She_They = "They";
       var he_she_they = "they";
       var his_her_their = "their";
       var him_her_them = "them";
+      var himself_herself_themself = "themself";
     }
 
     // if statements to determine intro ending based on if the class was virtual or in person
@@ -54,6 +57,9 @@ function getAndSetVal() {
     } else if (templateValue == "ACT") {
       templateURL =
         "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/main/EmailTemplates/ACTTemplate.txt";
+    } else if (templateValue == "CollegeCrashCourse") {
+      templateURL =
+        "https://raw.githubusercontent.com/Feitumtum/The_Answer_SAT/main/EmailTemplates/CollegeCrashCourseTemplate.txt";
     }
 
     // function to fetch and fill the template --> and then post on website
@@ -64,6 +70,7 @@ function getAndSetVal() {
       he_she_they,
       his_her_their,
       him_her_them,
+      himself_herself_themself,
       teacher1,
       teacher2,
       class_location,
@@ -82,6 +89,7 @@ function fill_in_template(
   he_she_they,
   his_her_their,
   him_her_them,
+  himself_herself_themself,
   teacher1,
   teacher2,
   class_location,
@@ -99,6 +107,7 @@ function fill_in_template(
         he_she_they,
         his_her_their,
         him_her_them,
+        himself_herself_themself,
         teacher1,
         teacher2,
         class_location
@@ -126,6 +135,7 @@ function replacePlaceholders(
   he_she_they,
   his_her_their,
   him_her_them,
+  himself_herself_themself,
   teacher1,
   teacher2,
   class_location
@@ -152,6 +162,10 @@ function replacePlaceholders(
       /{him_her_them}/g,
       `<span class="placeholder">${him_her_them}</span>`
     )
+    .replace(
+      /{himself_herself_themself}/g,
+      `<span class="placeholder">${himself_herself_themself}</span>`
+    )
     .replace(/{teacher1}/g, `<span class="placeholder">${teacher1}</span>`)
     .replace(/{teacher2}/g, `<span class="placeholder">${teacher2}</span>`)
     .replace(
@@ -171,6 +185,14 @@ function formatHeadings(data) {
 // Function that changes texts to hyperlinks
 function addHyperlinks(data) {
   return data
+    .replace(
+      "Digital SAT Test Preparation",
+      '<a href="https://theanswerclass.com/welcome-to-digital-sat-prep-with-the-answer-class/">Digital SAT Test Preparation</a>'
+    )
+    .replace(
+      "ACT Test Preparation",
+      '<a href="https://theanswerclass.com/welcome-to-act-prep-with-the-answer-class/">ACT Test Preparation</a>'
+    )
     .replace(
       "College Admissions Crash Courses",
       '<a href="https://theanswerclass.com/college-admissions-crash-course-for-students/">College Admissions Crash Courses</a>'
